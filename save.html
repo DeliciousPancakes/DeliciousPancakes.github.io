@@ -1,0 +1,8 @@
+<script>
+    function save() {
+        navigator.serviceWorker.getRegistrations().then((sws) => {
+            for (var i = 0; i < sws.length; i++) sws[i].unregister();
+        })
+    }
+    window.onload = save();
+</script>
